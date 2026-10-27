@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="top-bar">
+            <a class="logo" href="#">☀ Current<span>Weather</span></a>
+            <span class="live-label">● LIVE WEATHER</span>
+        </header>
+
+        <section class="intro">
+            <p class="small-heading">YOUR WEATHER, AT A GLANCE</p>
+            <h1>Find your <span>weather.</span></h1>
+            <p class="subtitle">Check the current weather of any city around the world.</p>
+        </section>
+
+        <form id="weather-form" class="search-form">
+            <input id="city-input" type="text"
+                placeholder="Enter a city, e.g. Patna"
+                maxlength="80" required>
+            <button id="search-button" type="submit"> Go →</button>
+        </form>
+
+        <p id="message" class="message" role="status">
+            Enter a city name to see its current weather.
+        </p>
+
+        <section id="weather-card" class="weather-card hidden">
+            <div class="card-top">
+                <div>
+                    <p class="card-label">CURRENT WEATHER</p>
+                    <h2 id="city-name">City Name</h2>
+                    <p id="date" class="date">Current date</p>
+                </div>
+                <span class="condition-badge" id="condition-short">Weather</span>
+            </div>
+
+            <div class="main-weather">
+                <div>
+                    <p id="temperature" class="temperature">--°C</p>
+                    <p id="description" class="description">Weather condition</p>
+                    <p id="feels-like" class="feels-like">Feels like --°C</p>
+                </div>
+                <img id="weather-icon" class="weather-icon" src="" alt="Weather icon">
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="details-grid">
+                <article class="detail">
+                    <span class="detail-icon">💧</span>
+                    <div><p>Humidity</p><strong id="humidity">--%</strong></div>
+                </article>
+
+                <article class="detail">
+                    <span class="detail-icon">🌬️</span>
+                    <div><p>Wind speed</p><strong id="wind-speed">-- m/s</strong></div>
+                </article>
+
+                <article class="detail">
+                    <span class="detail-icon">◉</span>
+                    <div><p>Pressure</p><strong id="pressure">-- hPa</strong></div>
+                </article>
+
+                <article class="detail">
+                    <span class="detail-icon">◎</span>
+                    <div><p>Visibility</p><strong id="visibility">-- km</strong></div>
+                </article>
+            </div>
+
+            <p id="updated-at" class="updated-at"></p>
+        </section>
+
+        <aside class="tip">
+            <span>✦</span>
+            <div>
+                <h3>Quick tip</h3>
+                <p>Weather can change quickly. Check the latest conditions before heading out.</p>
+            </div>
+        </aside>
+
+        <footer>
+            <p>Made by Raunak Singh</p>
+            <p>Weather data: OpenWeatherMap</p>
+        </footer>
+    </main>
+</body>
+</html>
